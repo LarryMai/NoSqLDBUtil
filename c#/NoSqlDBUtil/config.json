@@ -1,0 +1,22 @@
+{
+  "type": "influxdb",
+  "conn": {
+    "type": "http",
+    "ip": "127.0.0.1",
+    "port": 8086,
+    "db_name": "corepro_history_property",
+    "user": "root",
+    "passwd": "root"
+  },
+  "action": [
+    {
+      "category": "delete",
+      "measurement": "*",
+      "duration": {
+        "end_time": "now",
+        "unit": "day",
+        "value": "60"
+      }
+    }
+  ]
+}
